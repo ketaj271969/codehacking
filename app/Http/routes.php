@@ -23,7 +23,10 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
-Route::group(['admin/users' => 'admin'], function () {
-    
+// Route::group(['admin/users' => 'admin'], function () {
+Route::group(['middleware' => 'admin'], function () {
+	 
+    //Route::resource('admin/', 'AdminUsersController');
     Route::resource('admin/users', 'AdminUsersController');
+    
 });

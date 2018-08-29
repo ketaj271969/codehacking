@@ -46,7 +46,14 @@
 				<a class="navbar-brand" href="/">Home</a>
 			</div>
 			<!-- /.navbar-header -->
+			
+			<!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
+                    <li><a href="{{ url('/admin/users') }}">Users</a></li>
+                </ul>
 
+			<!-- Right Side Of Navbar -->
 			<ul class="nav navbar-top-links navbar-right">
 
 
@@ -97,9 +104,9 @@
 						<li><a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="/posts">All Posts</a></li>
+								<li><a href="/#">All Posts</a></li>
 
-								<li><a href="/posts/create">Create Post</a></li>
+								<li><a href="/#">Create Post</a></li>
 
 							</ul> <!-- /.nav-second-level --></li>
 
@@ -132,7 +139,7 @@
 						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Flot Charts</a></li>
+								<li><a href="flow.html">Flow Charts</a></li>
 								<li><a href="morris.html">Morris.js Charts</a></li>
 							</ul> <!-- /.nav-second-level --></li>
 						<li><a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
