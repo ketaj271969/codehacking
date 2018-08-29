@@ -46,7 +46,8 @@
 				<a class="navbar-brand" href="/">Home</a>
 			</div>
 			<!-- /.navbar-header -->
-			<ul class="nav navbar-nav">
+
+      <ul class="nav navbar-nav">
                     <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="{{ url('/admin/users') }}">User</a></li>
                 </ul>
@@ -60,7 +61,7 @@
 						{{Auth::user()->name}} <i class="fa fa-caret-down"> </i>
 				</a>
 					<ul class="dropdown-menu dropdown-user">
-						<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+						<li><a href="{{route('admin.users.edit',$user->id)}}"><i class="fa fa-user fa-fw"></i> User Profile</a>
 						</li>
 						<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
 						<li class="divider"></li>
@@ -101,6 +102,7 @@
 						<li><a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
+
 								<li><a href="{{route('admin.posts.index')}}">All Posts</a></li>
 
 								<li><a href="{{route('admin.posts.create')}}">Create Post</a></li>
@@ -136,7 +138,7 @@
 						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Flot Charts</a></li>
+								<li><a href="flow.html">Flow Charts</a></li>
 								<li><a href="morris.html">Morris.js Charts</a></li>
 							</ul> <!-- /.nav-second-level --></li>
 						<li><a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
