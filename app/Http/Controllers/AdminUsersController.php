@@ -51,7 +51,7 @@ class AdminUsersController extends Controller
         //
         //return $request->all();
         
-        // U.ser::create($request->all());
+        // User::create($request->all());
         
         if(trim($request->password) == ''){
             $input = $request->except('password');

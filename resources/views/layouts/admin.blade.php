@@ -46,6 +46,10 @@
 				<a class="navbar-brand" href="/">Home</a>
 			</div>
 			<!-- /.navbar-header -->
+			<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
+                    <li><a href="{{ url('/admin/users') }}">User</a></li>
+                </ul>
 
 			<ul class="nav navbar-top-links navbar-right">
 
@@ -97,9 +101,9 @@
 						<li><a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="/posts">All Posts</a></li>
+								<li><a href="{{route('admin.posts.index')}}">All Posts</a></li>
 
-								<li><a href="/posts/create">Create Post</a></li>
+								<li><a href="{{route('admin.posts.create')}}">Create Post</a></li>
 
 							</ul> <!-- /.nav-second-level --></li>
 
