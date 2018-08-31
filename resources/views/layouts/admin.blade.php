@@ -61,7 +61,11 @@
 						{{Auth::user()->name}} <i class="fa fa-caret-down"> </i>
 				</a>
 					<ul class="dropdown-menu dropdown-user">
-						<li><a href="{{route('admin.users.edit',$user->id)}}"><i class="fa fa-user fa-fw"></i> User Profile</a>
+<<<<<<< HEAD
+						<li><a href="admin/users/{{Auth::user()->id}}/edit/"><i class="fa fa-user fa-fw"></i> User Profile</a>
+=======
+						<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+>>>>>>> 8f7421201b4441b1c608150ba604743698775e2d
 						</li>
 						<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
 						<li class="divider"></li>
@@ -113,9 +117,9 @@
 						<li><a href="#"><i class="fa fa-wrench fa-fw"></i>Categories<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="/categories">All Categories</a></li>
+								<li><a href="{{route('admin.categories.index')}}">All Categories</a></li>
 
-								<li><a href="/categories/create">Create Category</a></li>
+								<li><a href="{{route('admin.categories.create')}}">Create Category</a></li>
 
 							</ul> <!-- /.nav-second-level --></li>
 
