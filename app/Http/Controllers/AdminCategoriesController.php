@@ -22,7 +22,7 @@ class AdminCategoriesController extends Controller
         
         return view('admin.categories.index', compact('categories'));
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
