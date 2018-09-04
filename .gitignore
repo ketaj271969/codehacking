@@ -5,3 +5,6 @@ Homestead.yaml
 Homestead.json
 .env
 config/app.php
+public/images/1535732771Screen Shot 2018-08-31 at 17.25.52.png
+*.png
+*.jpg
