@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+use App\Http\Requests\UsersEditRequest;
+use App\Http\Requests\UsersRequest;
 use App\Photo;
 use App\Role;
 use App\User;
+use Illuminate\Http\Request;
+
 use App\Http\Requests;
-use App\Http\Requests\UsersEditRequest;
-use App\Http\Requests\UsersRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 
 class AdminUsersController extends Controller
 {
@@ -90,6 +93,7 @@ class AdminUsersController extends Controller
     public function show($id)
     {
         //
+        return view('admin.users.show');
     }
 
     /**
