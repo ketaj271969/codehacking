@@ -25,7 +25,7 @@
     <![endif]-->
 
 
-
+@yield('styles')
 
 </head>
 
@@ -244,12 +244,7 @@
 	<!-- jQuery -->
 	<script src="{{asset('js/libs.js')}}"></script>
 
-
-	@yield('scripts')
-
-
-
-
+@yield('scripts')
 
 </body>
 

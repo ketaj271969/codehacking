@@ -6,11 +6,11 @@
 
 @stop
 
-@section('content');
+@section('content')
 
 <h1>Upload Media</h1>
 
-{!! Form::open(['method'=>'POST','action'=>'AdminMediaController','files'=>true]) !!}
+{!! Form::open(['method'=>'POST','action'=>'AdminMediaController@store','class'=>'dropzone']) !!}
 
 	{!! Form::close() !!}
 
