@@ -18,6 +18,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
+
 Route::group(['middleware' => 'admin'], function () {
     
     Route::get('/admin', function () {
@@ -33,8 +35,8 @@ Route::group(['middleware' => 'admin'], function () {
     
     Route::resource('admin/media', 'AdminMediaController');
 
-    Route::resource('admin/comments', 'AdminCommentsController');
+    Route::resource('admin/comments', 'PostCommentsController');
 
-    Route::resource('admin/comments/replies', 'AdminRepliesController');
+    Route::resource('admin/comments/replies', 'CommentRepliesController');
     
 });
