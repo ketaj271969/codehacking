@@ -4,7 +4,7 @@
 
 
 
-    @if(count($comments) > 0)
+    @if($comment)
         <h1>Comments</h1>
         <table class="table">
             <thead>
@@ -18,7 +18,7 @@
             </thead>
             <tbody>
             <tr>
-                @foreach($comments as $comment)
+
                     <td> {{$comment->id}}</td>
                     <td> {{$comment->author}}</td>
                     <td> {{$comment->email}}</td>
@@ -53,10 +53,12 @@
                         </div>
                     </td>
 
-                @endforeach
+
             </tr>
             </tbody>
         </table>
+
+
     @else
         <h1 class="text-center">No comments</h1>
     @endif
