@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
+use App\CommentReply;
 
 class CommentRepliesController extends Controller
 {
@@ -39,6 +39,33 @@ class CommentRepliesController extends Controller
         //
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function createReply(Request $request)
+    {
+        //return 'it works';
+
+        /** @var TYPE_NAME $user */
+        $user=Auth::user();
+
+        //   return $user->photo->file;
+
+        $data = [
+            'comment_id'=>$request->comment_id,
+            'author'=>$user->name,
+            'email'=>$user->email,
+            'photo'=>$user->photo->file,
+            'body'=>$request->body
+        ];
+        CommentReply::create($data);
+
+        $request->session()->flash('reply_message','Your reply has been submitted and is waiting moderation.');
+
+        return redirect()->back();
+
+    }
     /**
      * Display the specified resource.
      *

@@ -45,17 +45,20 @@ class PostCommentsController extends Controller
 
         $user=Auth::user();
 
-        $data = [
+     //   return $user->photo->file;
+
+       $data = [
             'post_id'=>$request->post_id,
             'author'=>$user->name,
             'email'=>$user->email,
-            'body'=>$request->body
-        ];
-        Comment::create($data);
+            'photo'=>$user->photo->file,
+           'body'=>$request->body
+       ];
+       Comment::create($data);
 
-        $request->session()->flash('comment_message','Your comment has been submitted and is waiting moderation.');
+       $request->session()->flash('comment_message','Your comment has been submitted and is waiting moderation.');
 
-       return redirect()->back();
+      return redirect()->back();
        // return $request->all();
 
 
