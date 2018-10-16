@@ -66,8 +66,9 @@
                 </div>
             </div>
 
-            @endforeach
+        @endforeach
 
     @endif
 
-    @stop
+
+@stop
