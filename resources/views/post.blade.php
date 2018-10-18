@@ -174,23 +174,10 @@
 
                 </div>
             </div>
-<<<<<<< HEAD
-
-        @endforeach
-=======
-<<<<<<< HEAD
 
         @endforeach
 
     @endif
-
-=======
-            @endforeach
->>>>>>> 12a7cda64e4c282b2c5d3a5c9d003610b3d2acd1
-
-    @endif
-
-
 
 @stop
 
@@ -213,8 +200,5 @@
 
 
     </script>
->>>>>>> f1c54fdd92f5b74a800b542ea8f2680f8421adb4
-
-
 @stop
 
