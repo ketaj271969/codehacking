@@ -177,6 +177,8 @@
 <<<<<<< HEAD
 
         @endforeach
+=======
+<<<<<<< HEAD
 
         @endforeach
 
